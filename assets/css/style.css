@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#backVideo{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+section{
+    position: absolute;
+    top:45%;
+    left:45%;
+    margin-top: -200px;
+    margin-left: -200px;
+    z-index: 1;
+}
+h1{color: rgb(202, 202, 202);}
+#invis{background: transparent; border: none;}
+.btn-large, .btn-small, .btn{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: solid rgba(255, 255, 255, 0.5) 2px;
+}
+.beginPg .btns{margin: 45px 0 0 -45px;}
+
+.ageCheckPg #LEFT{margin: 0 0 0 126px;}
+.ageCheckPg a{margin-top: 15px; margin-left: 45px;}
+
+.alcChoicePg{margin-top: -175px;}
+.alcContent {width: 550px;}
+.alcChoicePg a{margin: 10px;}
+
+
+.loadingPg{margin-left: -175px;}
+.loadingPg .loader{margin-left: 200px; margin-top: 35px;}
+
+.listPg{text-align: center; width: 500px;}
+.listPg a{margin-top: 15px; margin-bottom: 15px;}
+
+.ingPg{
+    width: 1000px;
+    margin-left: -400px;
+}
+.ingPg h4{
+    color: rgb(202, 202, 202);
+    border-bottom: 2.5px solid rgb(175, 175, 175);
+    margin-right: 11.25px; text-align: center;
+}
+.ingPg .ing, .ingPg .mix{
+    background:rgba(0, 0, 0, 0.5);
+    border: solid rgba(255, 255, 255, 0.5) 2px;
+    height: 350px;
+}
+.ingPg #enjoyBtn{margin-top: 50px;}
+
+.musicPg{top: 112.5vh; left: 97.5vw;}
+
+.historyPg{top: 25vh; left: 101.5vw; z-index: 0;}
+
+ #ingPg, #listPg, #loadingPg, #alcChoicePg, #ageCheckPg, #musicPg, #underagePg{
+    display: none;
+}
