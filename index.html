@@ -7,6 +7,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css"/>
+
     <title>Boozey</title>
   </head>
   <body>
@@ -30,12 +31,12 @@
     <section id="ageCheckPg" class="ageCheckPg">
         <div class="ageContent">
             <h1>Are you 21 or over?</h1>
-            <div class="btns row center">
-                <a class="btn-large col s2" id="LEFT olderBtn">YES</a>
-                <a class="btn-large col s2" id="RIGHT youngerBtn">NO</a>
+            <div class="btns row center" id="ageBtns">
+                <a class="btn-large col s2 LEFT" id="olderBtn">YES</a>
+                <a class="btn-large col s2 RIGHT" id="youngerBtn">NO</a>
             </div>
             <div class="legality">
-                <p>You must be of legal drinking age to access Boozey. </br>Boozey does not condone the sale or distribution of alcohol to persons under the age of 21. </br>By accessing Boozey, you swear and affirm that you are over the age of 21. </br>Boozey makes every effort to ensure that alcoholic beverages are not delivered to or served to anyone who is under the age of 21. </br>If you do not agree with these conditions of use, please do not use this Boozey. </br>If you intentionally or unintentionally misrepresent your age in order to provide alcohol to a person under the age of 21, Boozey will prosecute you fully to the extent allowable by law.</p>
+                <p>You must be of legal drinking age to access Boozey. Boozey does not condone the sale or distribution of alcohol to persons under the age of 21. By accessing Boozey, you swear and affirm that you are over the age of 21. Boozey makes every effort to ensure that alcoholic beverages are not delivered to or served to anyone who is under the age of 21. If you do not agree with these conditions of use, please do not use this Boozey. If you intentionally or unintentionally misrepresent your age in order to provide alcohol to a person under the age of 21, Boozey will prosecute you fully to the extent allowable by law.</p>
             </div>
         </div>
     </section>
@@ -45,14 +46,14 @@
             <h1>Pick your stimulant:</h1>
             <div class="btns row">
                 <a class="btn-flat disabled col s2" id="invis"></a>
-                <a class="btn col s2" id="LEFT vodkaBtn">VODKA</a>
-                <a class="btn col s2" id="MIDDLE rumBtn">RUM</a>
-                <a class="btn col s2" id="RIGHT ginBtn">GIN</a>
+                <a class="btn col s2 LEFT" id="vodkaBtn">VODKA</a>
+                <a class="btn col s2 MIDDLE" id="rumBtn">RUM</a>
+                <a class="btn col s2 RIGHT" id="ginBtn">GIN</a>
                 <a class="btn-flat disabled col s2" id="invis"></a>
                 <a class="btn-flat disabled col s2" id="invis"></a>
-                <a class="btn col s2" id="LEFT teqBtn">TEQUILA</a>
-                <a class="btn col s2" id="MIDDLE whisBtn">WHISKEY</a>
-                <a class="btn col s2" id="RIGHT bourBtn">BOURBON</a>
+                <a class="btn col s2 LEFT" id="teqBtn">TEQUILA</a>
+                <a class="btn col s2 MIDDLE" id="whisBtn">WHISKEY</a>
+                <a class="btn col s2 RIGHT" id="bourBtn">BOURBON</a>
                 <a class="btn-flat disabled col s2" id="invis"></a>
             </div>
         </div>
@@ -79,17 +80,21 @@
 
     <section id="listPg" class="listPg">
         <div class="listContent">
-            <h1 class="alcType" id="alcType">VODKA</h1>
+            <h1 class="alcType" id="alcType"></h1>
             <div class="btns row">
+                <a class="btn-flat disabled col s0.5" id="invis"></a>
                 <a class="btn-large col s5" id="drink1Btn"></a>
                 <a class="btn-flat disabled col s1" id="invis"></a>
                 <a class="btn-large col s5" id="drink2Btn"></a>
+                <a class="btn-flat disabled col s0.5" id="invis"></a>
                 <a class="btn-large col s5" id="drink3Btn"></a>
                 <a class="btn-flat disabled col s1" id="invis"></a>
                 <a class="btn-large col s5" id="drink4Btn"></a>
+                <a class="btn-flat disabled col s0.5" id="invis"></a>
                 <a class="btn-large col s5" id="drink5Btn"></a>
                 <a class="btn-flat disabled col s1" id="invis"></a>
                 <a class="btn-large col s5" id="drink6Btn"></a>
+                <a class="btn-flat disabled col s0.5" id="invis"></a>
                 <a class="btn-large col s5" id="drink7Btn"></a>
                 <a class="btn-flat disabled col s1" id="invis"></a>
                 <a class="btn-large col s5" id="drink8Btn"></a>
@@ -152,6 +157,6 @@
             <h1>YOU ARE UNDERAGE. </br>YOU HAVE TO BE AGE 21 OR OLDER TO ACCESS THIS WEBSITE.</h1>
         </div>
     </section>
-
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

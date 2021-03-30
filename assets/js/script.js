@@ -46,7 +46,8 @@ var underagePg = document.querySelector("#underagePg");
 
 var historyA = [];
 var storedHistory = [];
-var results = [];
+var resultsName = [];
+var resultsIng = [];
 
 function start(){
     beginPg.style.display = "block";
@@ -63,6 +64,7 @@ function start(){
 function displayAgeCheck(){
     ageCheckPg.style.display = "block";
     beginPg.style.display = "none";
+    musicPg.style.display = "none";
 }
 
 function displayAlcChoice(){
@@ -71,22 +73,22 @@ function displayAlcChoice(){
     ageCheckPg.style.display = "none";
 
     vodkaBtn.onclick = function(event){
-        displayLoading("vodka");
+        displayLoading("Vodka");
     };
     rumBtn.onclick = function(event){
-        displayLoading("rum");
+        displayLoading("Rum");
     };
     ginBtn.onclick = function(event){
-        displayLoading("gin");
+        displayLoading("Gin");
     };
     teqBtn.onclick = function(event){
-        displayLoading("tequila");
+        displayLoading("Tequila");
     };
     whisBtn.onclick = function(event){
-        displayLoading("whiskey");
+        displayLoading("Whiskey");
     };
     bourBtn.onclick = function(event){
-        displayLoading("bourbon");
+        displayLoading("Bourbon");
     };
 }
 
@@ -120,41 +122,51 @@ function displayList(alcohol){
     listPg.style.display = "block";
     loadingPg.style.display = "none";
 
+    getDrinks(alcohol);
+
     alcType.textContent = alcohol;
     //search for drinks with alcohol
 
-    drink1Btn.textConext = results[0];
-    drink2Btn.textContent = results[1];
-    drink3Btn.textContent = results[2];
-    drink4Btn.textContent = results[3];
-    drink5Btn.textContent = results[4];
-    drink6Btn.textContent = results[5];
-    drink7Btn.textContent = results[6];
-    drink8Btn.textContent = results[7];
+    drink1Btn.textContent = resultsName.drinks[0].strDrink;
+    drink2Btn.textContent = resultsName.drinks[1].strDrink;
+    drink3Btn.textContent = resultsName.drinks[2].strDrink;
+    drink4Btn.textContent = resultsName.drinks[3].strDrink;
+    drink5Btn.textContent = resultsName.drinks[4].strDrink;
+    drink6Btn.textContent = resultsName.drinks[5].strDrink;
+    drink7Btn.textContent = resultsName.drinks[6].strDrink;
+    drink8Btn.textContent = resultsName.drinks[7].strDrink;
 
     drink1Btn.onclick = function(event){
-        displayIng(event);
+        displayIng(resultsName.drinks[0].idDrink);
+        saveDrink(resultsName.drinks[0].idDrink);
     };
     drink2Btn.onclick = function(event){
-        displayIng(event);
+        displayIng(resultsName.drinks[1].idDrink);
+        saveDrink(resultsName.drinks[1].idDrink);
     };
     drink3Btn.onclick = function(event){
-        displayIng(event);
+        displayIng(resultsName.drinks[2].idDrink);
+        saveDrink(resultsName.drinks[2].idDrink);
     };
     drink4Btn.onclick = function(event){
-        displayIng(event);
+        displayIng(resultsName.drinks[3].idDrink);
+        saveDrink(resultsName.drinks[3].idDrink);
     };
     drink5Btn.onclick = function(event){
-        displayIng(event);
+        displayIng(resultsName.drinks[4].idDrink);
+        saveDrink(resultsName.drinks[4].idDrink);
     };
     drink6Btn.onclick = function(event){
-        displayIng(event);
+        displayIng(resultsName.drinks[5].idDrink);
+        saveDrink(resultsName.drinks[5].idDrink);
     };
     drink7Btn.onclick = function(event){
-        displayIng(event);
+        displayIng(resultsName.drinks[6].idDrink);
+        saveDrink(resultsName.drinks[6].idDrink);
     };
     drink8Btn.onclick = function(event){
-        displayIng(event);
+        displayIng(resultsName.drinks[7].idDrink);
+        saveDrink(resultsName.drinks[7].idDrink);
     };
     historyBtn.onclick = function(event){
         displayHistory();
@@ -162,13 +174,21 @@ function displayList(alcohol){
 
 }
 
-function displayIng(){
+function displayIng(id){
     ingPg.style.display = "block";
     listPg.style.display = "none";
 
+    searchIng(id);
+
     //search for ingredients and directions with id
-    var ingredients = [];
-    var directions = [];
+    var ingredients = [resultsIng.drinks[0].strIngredient1, resultsIng.drinks[0].strIngredient2, resultsIng.drinks[0].strIngredient3, resultsIng.drinks[0].strIngredient4, resultsIng.drinks[0].strIngredient5,
+     resultsIng.drinks[0].strIngredient6, resultsIng.drinks[0].strIngredient7, resultsIng.drinks[0].strIngredient8, resultsIng.drinks[0].strIngredient9, resultsIng.drinks[0].strIngredient10, 
+     resultsIng.drinks[0].strIngredient11, resultsIng.drinks[0].strIngredient12, resultsIng.drinks[0].strIngredient13, resultsIng.drinks[0].strIngredient14, resultsIng.drinks[0].strIngredient15];
+
+     console.log(ingredients);
+
+    var dir = resultsIng.drinks[0].strInstructions; 
+    var directions = dir.split(".");
 
     for(var i = 0; i < ingredients.length; i++){
         var list = document.createElement("li");
@@ -184,7 +204,6 @@ function displayIng(){
     enjoyBtn.onclick = function(event){
         displayMusic();
     };
-    saveDrink();
 }
 
 function displayMusic(){
@@ -211,6 +230,49 @@ function getStorage(){
 
 }
 
+function getDrinks(alcohol){
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i='+alcohol)
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
+      }
+
+      // Examine the text in the response
+      response.json().then(function(data) {
+        console.log(data);
+        resultsName = data;
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
+}
+function searchIng(id){
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='+id.toString())
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
+      }
+
+      // Examine the text in the response
+      response.json().then(function(data) {
+        console.log(data);
+        resultsIng = data;
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
+}
+
 beginBtn.addEventListener("click", displayAgeCheck)
 
 olderBtn.addEventListener("click", displayAlcChoice)
@@ -225,10 +287,5 @@ clearSBBtn.addEventListener("click", function(){
 historyBtn.addEventListener("click", function(){
     displayHistory();
 });
-
-$("#historyBtn").sideNav('show', {
-    closeOnClick: true
-});
-$("#closeSBBtn").sideNav('hide');
 
 start();

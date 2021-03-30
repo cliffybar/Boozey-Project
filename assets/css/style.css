@@ -30,19 +30,23 @@ h1{color: rgb(202, 202, 202);}
 }
 .beginPg .btns{margin: 45px 0 0 -45px;}
 
-.ageCheckPg #LEFT{margin: 0 0 0 126px;}
+.ageCheckPg .LEFT{margin-right: 126px;}
 .ageCheckPg a{margin-top: 15px; margin-left: 45px;}
+.ageCheckPg #ageBtns{padding-left: 115px;}
+.ageCheckPg p{width: 35vw; text-align: center; color:rgba(255, 255, 255, .5); padding-left: 60px;}
 
 .alcChoicePg{margin-top: -175px;}
 .alcContent {width: 550px;}
 .alcChoicePg a{margin: 10px;}
 
 
+
 .loadingPg{margin-left: -175px;}
 .loadingPg .loader{margin-left: 200px; margin-top: 35px;}
 
 .listPg{text-align: center; width: 500px;}
-.listPg a{margin-top: 15px; margin-bottom: 15px;}
+.listPg a{margin-top: 15px; margin-bottom: 15px; width:auto;}
+.listPg ol{color:rgb(202, 202, 202);}
 
 .ingPg{
     width: 1000px;
