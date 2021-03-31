@@ -288,4 +288,8 @@ historyBtn.addEventListener("click", function(){
     displayHistory();
 });
 
+<<<<<<< HEAD
 start();
+=======
+start();
+>>>>>>> 990e32f9320be7b1538f03d6a7f298d2589a5205
