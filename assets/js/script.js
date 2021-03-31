@@ -251,6 +251,7 @@ function getDrinks(alcohol){
     console.log('Fetch Error :-S', err);
   });
 }
+
 function searchIng(id){
     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='+id.toString())
   .then(
