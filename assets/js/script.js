@@ -37,10 +37,7 @@ var musicPg = document.querySelector("#musicPg");
 var anotherBtn = document.querySelector("#anotherBtn");
 
 var historyPg = document.querySelector("#historyPg");
-var historySideNav = document.querySelector("#historySideNav");
-var historyBtn = document.querySelector("#historyBtn");
-var clearSBBtn = document.querySelector("#clearSBBtn");
-var closeSBBtn = document.querySelector("#closeSBBtn");
+var historyCont = document.querySelector("#historyContent");
 
 var underagePg = document.querySelector("#underagePg");
 
@@ -59,6 +56,7 @@ function start(){
     ingPg.style.display = "none";
     musicPg.style.display = "none";
     historyPg.style.display = "none";
+    historyCont.style.display = "none";
 }
 
 function displayAgeCheck(){
@@ -180,15 +178,18 @@ function displayIng(id){
 
     searchIng(id);
 
+    }
+
+function disIng(cocktail){
     //search for ingredients and directions with id
-    var ingredients = [resultsIng.drinks[0].strIngredient1, resultsIng.drinks[0].strIngredient2, resultsIng.drinks[0].strIngredient3, resultsIng.drinks[0].strIngredient4, resultsIng.drinks[0].strIngredient5,
-     resultsIng.drinks[0].strIngredient6, resultsIng.drinks[0].strIngredient7, resultsIng.drinks[0].strIngredient8, resultsIng.drinks[0].strIngredient9, resultsIng.drinks[0].strIngredient10, 
-     resultsIng.drinks[0].strIngredient11, resultsIng.drinks[0].strIngredient12, resultsIng.drinks[0].strIngredient13, resultsIng.drinks[0].strIngredient14, resultsIng.drinks[0].strIngredient15];
+    var ingredients = [cocktail.drinks[0].strIngredient1, cocktail.drinks[0].strIngredient2, cocktail.drinks[0].strIngredient3, cocktail.drinks[0].strIngredient4, cocktail.drinks[0].strIngredient5,
+    cocktail.drinks[0].strIngredient6, cocktail.drinks[0].strIngredient7, cocktail.drinks[0].strIngredient8, cocktail.drinks[0].strIngredient9, cocktail.drinks[0].strIngredient10, 
+    cocktail.drinks[0].strIngredient11, cocktail.drinks[0].strIngredient12, cocktail.drinks[0].strIngredient13, cocktail.drinks[0].strIngredient14, cocktail.drinks[0].strIngredient15];
 
      console.log(ingredients);
 
-    var dir = resultsIng.drinks[0].strInstructions; 
-    var directions = dir.split(".");
+    var dire = cocktail.drinks[0].strInstructions; 
+    var directions = dire.split(".");
 
     for(var i = 0; i < ingredients.length; i++){
         var list = document.createElement("li");
@@ -265,7 +266,7 @@ function searchIng(id){
       // Examine the text in the response
       response.json().then(function(data) {
         console.log(data);
-        resultsIng = data;
+        disIng(data);
       });
     }
   )
@@ -285,8 +286,9 @@ clearSBBtn.addEventListener("click", function(){
     historyA.innerHTML = "";
 });
 
-historyBtn.addEventListener("click", function(){
-    displayHistory();
-});
-
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+  }); 
+  
 start();

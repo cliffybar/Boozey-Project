@@ -124,6 +124,7 @@
     </section>
 
     <section id="musicPg" class="musicPg">
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWVvXA824aCbn" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         <div class="musicContent">
             <a class="btn-large col s4 offset-8" id="anotherBtn">ANOTHER ROUND</a>
         </div>
@@ -131,24 +132,15 @@
 
     <section id="historyPg" class="historyPg">
         <div class="historyContent">
-            <a href="#" data-activities="slide-out" class="btn-large col s3 offset-9" id="historyBtn">HISTORY</a>
+            <a class='dropdown-trigger btn-large col s3 offset-9' href='#' data-target='dropdown1' id="historyBtn">HISTORY</a>
         </div>
-        <div class="historySideNav" id="historySideNav">
-            <ul id="slide-out" class="sidenav">
-                <li><h1>HISTORY</h1></li>
-                <li><div class="divider"></div></li>
-                <li><ol id="historyList"></ol></li>
-                <li class="sidenav-footer grey">
-                    <div class="row">
-                        <a class="btn-flat disabled col s1" id="invis"></a>
-                        <a class="btn-small col s2" id="clearSBBtn">CLEAR</a>
-                        <a class="btn-flat disabled col s1" id="invis"></a>
-                        <a class="btn-small col s2 sidenav-close" id="closeSBBtn" href="#!">CLOSE</a>
-                        <a class="btn-flat disabled col s1" id="invis"></a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!"></a>1</li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!"></a>2</li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!"></a>3</li>
+        </ul>
     </section>
 
     <section id="underagePg" class="underagePg">

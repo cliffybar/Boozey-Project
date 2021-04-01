@@ -62,9 +62,12 @@ h1{color: rgb(202, 202, 202);}
     border: solid rgba(255, 255, 255, 0.5) 2px;
     height: 350px;
 }
+.ingPg ol{color:rgb(202, 202, 202); text-align: center; font-size: 1.5em; padding-top: 50px; list-style-type: none;}
 .ingPg #enjoyBtn{margin-top: 50px;}
 
-.musicPg{top: 112.5vh; left: 97.5vw;}
+.musicPg {top: 50vh; left: 92.5vw;}
+.musicPg .musicContent{margin-top: 200px; margin-left: 100px;}
+
 
 .historyPg{top: 25vh; left: 101.5vw; z-index: 0;}
 
