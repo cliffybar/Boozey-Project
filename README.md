@@ -16,6 +16,14 @@ Take agency over how you define your day and get Boozey!
 
 </br>
 
+## Languages Used
+
+1. HTML
+2. CSS
+3. JavaScript
+4. jQuery
+5. Materialize
+
 ## Our Value to You
 
 *Boozey employs a three-tiered process:*
