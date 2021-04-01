@@ -106,7 +106,7 @@ function displayUnderage(){
 function displayLoading(alcohol){
     loadingPg.style.display = "block";
     alcChoicePg.style.display = "none";
-    var seconds = 4;
+    var seconds = 2;
     var countdown = setInterval(function() {
         seconds--;
         if (seconds <= 0){
