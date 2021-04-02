@@ -93,20 +93,13 @@ function displayAlcChoice(){
 function displayUnderage(){
     underagePg.style.display = "block";
     ageCheckPg.style.display = "none";
-    var seconds = 10;
-    var countdown = setInterval(function() {
-        seconds--;
-        if (seconds <= 0){
-            start();
-            clearInterval(countdown);
-        }
-    }, 1000);
+    setTimeout(start,10000);
 }
 
 function displayLoading(alcohol){
     loadingPg.style.display = "block";
     alcChoicePg.style.display = "none";
-    var seconds = 2;
+    var seconds = 3;
     var countdown = setInterval(function() {
         seconds--;
         if (seconds <= 0){
@@ -120,54 +113,53 @@ function displayList(alcohol){
     listPg.style.display = "block";
     loadingPg.style.display = "none";
 
-    getDrinks(alcohol);
-
     alcType.textContent = alcohol;
+    getDrinks(alcohol);
+}
+function disList(list){
+
     //search for drinks with alcohol
 
-    drink1Btn.textContent = resultsName.drinks[0].strDrink;
-    drink2Btn.textContent = resultsName.drinks[1].strDrink;
-    drink3Btn.textContent = resultsName.drinks[2].strDrink;
-    drink4Btn.textContent = resultsName.drinks[3].strDrink;
-    drink5Btn.textContent = resultsName.drinks[4].strDrink;
-    drink6Btn.textContent = resultsName.drinks[5].strDrink;
-    drink7Btn.textContent = resultsName.drinks[6].strDrink;
-    drink8Btn.textContent = resultsName.drinks[7].strDrink;
+    drink1Btn.textContent = list.drinks[0].strDrink;
+    drink2Btn.textContent = list.drinks[1].strDrink;
+    drink3Btn.textContent = list.drinks[2].strDrink;
+    drink4Btn.textContent = list.drinks[3].strDrink;
+    drink5Btn.textContent = list.drinks[4].strDrink;
+    drink6Btn.textContent = list.drinks[5].strDrink;
+    drink7Btn.textContent = list.drinks[6].strDrink;
+    drink8Btn.textContent = list.drinks[7].strDrink;
 
     drink1Btn.onclick = function(event){
-        displayIng(resultsName.drinks[0].idDrink);
-        saveDrink(resultsName.drinks[0].idDrink);
+        displayIng(list.drinks[0].idDrink);
+        saveDrink(list.drinks[0].idDrink);
     };
     drink2Btn.onclick = function(event){
-        displayIng(resultsName.drinks[1].idDrink);
-        saveDrink(resultsName.drinks[1].idDrink);
+        displayIng(list.drinks[1].idDrink);
+        saveDrink(list.drinks[1].idDrink);
     };
     drink3Btn.onclick = function(event){
-        displayIng(resultsName.drinks[2].idDrink);
-        saveDrink(resultsName.drinks[2].idDrink);
+        displayIng(list.drinks[2].idDrink);
+        saveDrink(list.drinks[2].idDrink);
     };
     drink4Btn.onclick = function(event){
-        displayIng(resultsName.drinks[3].idDrink);
-        saveDrink(resultsName.drinks[3].idDrink);
+        displayIng(list.drinks[3].idDrink);
+        saveDrink(list.drinks[3].idDrink);
     };
     drink5Btn.onclick = function(event){
-        displayIng(resultsName.drinks[4].idDrink);
-        saveDrink(resultsName.drinks[4].idDrink);
+        displayIng(list.drinks[4].idDrink);
+        saveDrink(list.drinks[4].idDrink);
     };
     drink6Btn.onclick = function(event){
-        displayIng(resultsName.drinks[5].idDrink);
-        saveDrink(resultsName.drinks[5].idDrink);
+        displayIng(list.drinks[5].idDrink);
+        saveDrink(list.drinks[5].idDrink);
     };
     drink7Btn.onclick = function(event){
-        displayIng(resultsName.drinks[6].idDrink);
-        saveDrink(resultsName.drinks[6].idDrink);
+        displayIng(list.drinks[6].idDrink);
+        saveDrink(list.drinks[6].idDrink);
     };
     drink8Btn.onclick = function(event){
-        displayIng(resultsName.drinks[7].idDrink);
-        saveDrink(resultsName.drinks[7].idDrink);
-    };
-    historyBtn.onclick = function(event){
-        displayHistory();
+        displayIng(list.drinks[7].idDrink);
+        saveDrink(list.drinks[7].idDrink);
     };
 
 }
@@ -244,7 +236,7 @@ function getDrinks(alcohol){
       // Examine the text in the response
       response.json().then(function(data) {
         console.log(data);
-        resultsName = data;
+        disList(data);
       });
     }
   )
