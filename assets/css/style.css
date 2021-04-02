@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.appname {
+    font-family: 'Cinzel Decorative', serif;
 }
 
 #backVideo{
@@ -14,7 +19,7 @@
     z-index: -1;
 }
 
-section{
+section {
     position: absolute;
     top:45%;
     left:45%;
@@ -22,6 +27,7 @@ section{
     margin-left: -200px;
     z-index: 1;
 }
+
 h1{color: rgb(202, 202, 202);}
 #invis{background: transparent; border: none;}
 .btn-large, .btn-small, .btn{
