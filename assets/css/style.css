@@ -33,24 +33,24 @@ h1{color: rgb(202, 202, 202);}
 .ageCheckPg .LEFT{margin-right: 126px;}
 .ageCheckPg a{margin-top: 15px; margin-left: 45px;}
 .ageCheckPg #ageBtns{padding-left: 115px;}
-.ageCheckPg p{width: 35vw; text-align: center; color:rgba(255, 255, 255, .5); padding-left: 60px;}
+.ageCheckPg p{width: 30vw; text-align: center; color:rgba(255, 255, 255, .5); padding-left: 15px;}
 
 .alcChoicePg{margin-top: -175px;}
 .alcContent {width: 550px;}
 .alcChoicePg a{margin: 10px;}
 
-
-
 .loadingPg{margin-left: -175px;}
 .loadingPg .loader{margin-left: 200px; margin-top: 35px;}
 
 .listPg{text-align: center; width: 500px;}
-.listPg a{margin-top: 15px; margin-bottom: 15px; width:auto;}
+.listPg a{margin-top: 15px; margin-bottom: 15px; width:auto; overflow: hidden;}
 .listPg ol{color:rgb(202, 202, 202);}
 
 .ingPg{
     width: 1000px;
-    margin-left: -400px;
+    margin-left: -450px;
+    margin-top: -350px;
+    margin-bottom: 0;
 }
 .ingPg h4{
     color: rgb(202, 202, 202);
@@ -60,14 +60,15 @@ h1{color: rgb(202, 202, 202);}
 .ingPg .ing, .ingPg .mix{
     background:rgba(0, 0, 0, 0.5);
     border: solid rgba(255, 255, 255, 0.5) 2px;
-    height: 350px;
+    height: 650px;
 }
-.ingPg ol{color:rgb(202, 202, 202); text-align: center; font-size: 1.5em; padding-top: 50px; list-style-type: none;}
-.ingPg #enjoyBtn{margin-top: 50px;}
+.ingPg ol{color:rgb(202, 202, 202); text-align: center; font-size: 1.5em; padding-top: 25px; list-style-type: none;}
+.ingPg #enjoyBtn{margin-top: 25px;}
 
 .musicPg {top: 50vh; left: 92.5vw;}
 .musicPg .musicContent{margin-top: 200px; margin-left: 100px;}
 
+.underagePg{margin-left: -600px;}
 
 .historyPg{top: 25vh; left: 101.5vw; z-index: 0;}
 
