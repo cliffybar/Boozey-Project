@@ -4,7 +4,6 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
         <link rel="stylesheet" href="./assets/css/style.css"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,21 +14,26 @@
     </head>
 
     <body>
+        <!-- VIDEO BACKGROUND START -->
         <div class="video-container">
-        <video autoplay loop muted>
-            <source src="./assets/media/backgroundVidShort.mp4" type="video/mp4">
-        </video>
+            <video autoplay loop muted>
+                <source src="./assets/media/backgroundVidShort.mp4" type="video/mp4">
+            </video>
         </div>
+        <!-- VIDEO BACKGROUND END -->
 
+        <!-- WELCOME PAGE START -->
         <section id="beginPg" class="beginPg valign-wrapper center-align">
-            <div class="beginContent">
+            <div class="begincontent">
                 <h1>Ready to get <span class="appname">Boozey?</span></h1>
                 <div class="btns">
                     <a class="btn-large" id="beginBtn">BEGIN</a>
                 </div>
             </div>
         </section>
+        <!-- WELCOME PAGE END -->
 
+        <!-- AGE CHECK START -->
         <section id="ageCheckPg" class="ageCheckPg">
             <div class="ageContent">
                 <h1>Are you 21 or over?</h1>
@@ -51,7 +55,9 @@
                 </div>
             </div>
         </section>
+        <!-- AGE CHECK END -->
 
+        <!-- STIMULANT PAGE START -->
         <section id="alcChoicePg" class="alcChoicePg">
             <div class="alcContent">
                 <h1>Pick your stimulant:</h1>
@@ -69,7 +75,9 @@
                 </div>
             </div>
         </section>
+        <!-- STIMULANT PAGE END -->
 
+        <!-- LOADING PAGE START -->
         <section id="loadingPg" class="loadingPg">
             <div class="loadingContent">
                 <h1>Exquisite choice...</h1>
@@ -88,7 +96,9 @@
                 </div>
             </div>
         </section>
+        <!-- LOADING PAGE END -->
 
+        <!-- DRINK LIST START -->
         <section id="listPg" class="listPg">
             <div class="listContent">
                 <h1 class="alcType" id="alcType"></h1>
@@ -112,7 +122,9 @@
                 </div>
             </div>
         </section>
+        <!-- DRINK LIST END -->
 
+        <!-- INGREDIENTS PAGE START -->
         <section id="ingPg" class="ingPg">
             <div class="ingContent">
                 <div class="row">
@@ -134,14 +146,18 @@
                 </div>
             </div>
         </section>
+        <!-- INGREDIENTS PAGE START -->
 
+        <!-- MUSIC START -->
         <section id="musicPg" class="musicPg">
             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWVvXA824aCbn" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             <div class="musicContent">
                 <a class="btn-large col s4 offset-8" id="anotherBtn">ANOTHER ROUND</a>
             </div>
         </section>
+        <!-- MUSIC END -->
 
+        <!-- HISTORY PAGE START -->
         <section id="historyPg" class="historyPg">
             <div class="historyContent">
                 <a class='dropdown-trigger btn-large col s3 offset-9' href='#' data-target='dropdown1' id="historyBtn">HISTORY</a>
@@ -154,12 +170,16 @@
                 <li><a href="#!"></a>3</li>
             </ul>
         </section>
+        <!-- HISTORY PAGE END -->
 
+        <!-- UNDERAGE PAGE START -->
         <section id="underagePg" class="underagePg">
             <div class="underageContent">
                 <h1>YOU ARE UNDERAGE. </br>YOU HAVE TO BE AGE 21 OR OLDER TO ACCESS THIS WEBSITE.</h1>
             </div>
         </section>
+        <!-- UNDERAGE PAGE END -->
+
         <script src="./assets/js/script.js"></script>
     </body>
 </html>
