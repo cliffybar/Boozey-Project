@@ -42,14 +42,16 @@
     margin-left: 45px;
 }
 
-.ageCheckPg #ageBtns {
+#ageBtns {
     padding-left: 115px;
 }
 
-.ageCheckPg p {
+.legality {
     width: 30vw; 
     text-align: center; 
-    color:rgba(255, 255, 255, .5); 
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: solid rgba(255, 255, 255, 0.5) 2px;
 }
 /* AGE CHECK END */
 
@@ -182,7 +184,7 @@ h1 {
 }
 
 .btn-large, .btn {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     border: solid rgba(255, 255, 255, 0.5) 2px;
 }
 
@@ -199,6 +201,14 @@ h1 {
         align-items: center;
     }
   
+    .ingContent .row {
+        width: 80%;
+    }
+
+    .enjoyBtn {
+        text-align: center;
+    }
+
     /* .wrapper {
         width: 100%;
         padding: 20px;
