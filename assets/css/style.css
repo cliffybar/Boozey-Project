@@ -197,117 +197,104 @@ h1 {
 /* MEDIA QUERIES */
 /* Width at 1024px and below */
 @media screen and (max-width: 1024px) {
-    body {
-        align-items: center;
+    .legality {
+        width: 70%;
     }
-  
+
     .ingContent .row {
-        width: 80%;
+        width: 70%;
     }
 
-    .enjoyBtn {
-        text-align: center;
-    }
-
-    /* .wrapper {
-        width: 100%;
-        padding: 20px;
-    }
-  
-    #main-content,
-    #sidebar {
-        width: 100%;
-    }
-  
-    #sidebar {
-        margin-top: 40px;
+    #enjoyBtn {
+        width: 10%;
     }
 }
   
 /* Width at 980px and below */
 @media screen and (max-width: 980px) {
-    body {
-        background-color: #333;
+    .legality {
+        width: 70%;
     }
-  
-    .wrapper {
-        /* Box-model */
-        width: 100%;
-        padding: 20px;
+
+    .ingContent .row {
+        width: 70%;
     }
-  
-    #main-content,
-    #sidebar {
-        width: 100%;
-    }
-  
-    #sidebar {
-        margin-top: 40px;
+
+    #enjoyBtn {
+        width: 15%;
     }
 }
   
 /* Width at 768px and below */
 @media screen and (max-width: 768px) {
+    video {
+        display: none;
+    }
+
     body {
-        background-color: #333;
+        background-image: url(../media/poster.jpg);
+        background-repeat: no-repeat;
     }
-  
-    .wrapper {
-        /* Box-model */
-        width: 100%;
-        padding: 20px;
+    
+    .beginContent {
+        width: 80%;
     }
-  
-    #main-content,
-    #sidebar {
-        width: 100%;
+    
+    .legality {
+        width: 75%;
     }
-  
-    #sidebar {
-        margin-top: 40px;
+
+    .ingContent .row {
+        width: 60%;
+    }
+
+    #enjoyBtn {
+        width: 15%;
     }
 }
   
 /* Width at 575px and below */
 @media screen and (max-width: 575px) {
+    video {
+        display: none;
+    }
+
     body {
-        al
+        background-image: url(../media/poster.jpg);
+        background-repeat: no-repeat;
     }
-  
-    .wrapper {
-        /* Box-model */
-        width: 100%;
-        padding: 20px;
+    
+    .beginContent {
+        width: 80%;
     }
-  
-    #main-content,
-    #sidebar {
-        width: 100%;
+    
+    .ageContent h1 {
+        width: 90%;
+        text-align: center;
     }
-  
-    #sidebar {
-        margin-top: 40px;
+
+    .legality {
+        width: 75%;
     }
-}
-  
-/* Width at 300px and below */
-@media screen and (max-width: 300px) {
-    body {
-        background-color: #333;
+
+    .alcContent {
+        width: 90%;
     }
-  
-    .wrapper {
-        /* Box-model */
-        width: 100%;
-        padding: 20px;
+
+    .alcContent h1 {
+        text-align: center;
     }
-  
-    #main-content,
-    #sidebar {
-        width: 100%;
+
+    .alcContent .btn {
+        font-size: 10px;
     }
-  
-    #sidebar {
-        margin-top: 40px;
+
+    .ingContent .row {
+        width: 50%;
+        flex: content;
+    }
+
+    #enjoyBtn {
+        width: 15%;
     }
 }
