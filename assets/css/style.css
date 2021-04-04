@@ -50,7 +50,6 @@
     width: 30vw; 
     text-align: center; 
     color:rgba(255, 255, 255, .5); 
-    padding-left: 15px;
 }
 /* AGE CHECK END */
 
@@ -197,109 +196,108 @@ h1 {
 /* Width at 1024px and below */
 @media screen and (max-width: 1024px) {
     body {
-      display: none;
-      
+        align-items: center;
     }
   
     /* .wrapper {
-      width: 100%;
-      padding: 20px;
+        width: 100%;
+        padding: 20px;
     }
   
     #main-content,
     #sidebar {
-      width: 100%;
+        width: 100%;
     }
   
     #sidebar {
-      margin-top: 40px;
-    } */
+        margin-top: 40px;
+    }
 }
   
 /* Width at 980px and below */
 @media screen and (max-width: 980px) {
     body {
-      background-color: #333;
+        background-color: #333;
     }
   
     .wrapper {
-      /* Box-model */
-      width: 100%;
-      padding: 20px;
+        /* Box-model */
+        width: 100%;
+        padding: 20px;
     }
   
     #main-content,
     #sidebar {
-      width: 100%;
+        width: 100%;
     }
   
     #sidebar {
-      margin-top: 40px;
+        margin-top: 40px;
     }
 }
   
 /* Width at 768px and below */
 @media screen and (max-width: 768px) {
     body {
-      background-color: #333;
+        background-color: #333;
     }
   
     .wrapper {
-      /* Box-model */
-      width: 100%;
-      padding: 20px;
+        /* Box-model */
+        width: 100%;
+        padding: 20px;
     }
   
     #main-content,
     #sidebar {
-      width: 100%;
+        width: 100%;
     }
   
     #sidebar {
-      margin-top: 40px;
+        margin-top: 40px;
     }
 }
   
 /* Width at 575px and below */
 @media screen and (max-width: 575px) {
     body {
-      background-color: #333;
+        al
     }
   
     .wrapper {
-      /* Box-model */
-      width: 100%;
-      padding: 20px;
+        /* Box-model */
+        width: 100%;
+        padding: 20px;
     }
   
     #main-content,
     #sidebar {
-      width: 100%;
+        width: 100%;
     }
   
     #sidebar {
-      margin-top: 40px;
+        margin-top: 40px;
     }
 }
   
 /* Width at 300px and below */
 @media screen and (max-width: 300px) {
     body {
-      background-color: #333;
+        background-color: #333;
     }
   
     .wrapper {
-      /* Box-model */
-      width: 100%;
-      padding: 20px;
+        /* Box-model */
+        width: 100%;
+        padding: 20px;
     }
   
     #main-content,
     #sidebar {
-      width: 100%;
+        width: 100%;
     }
   
     #sidebar {
-      margin-top: 40px;
+        margin-top: 40px;
     }
 }
