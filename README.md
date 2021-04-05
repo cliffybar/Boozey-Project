@@ -46,4 +46,4 @@ Take agency over how you define your day and get Boozey!
 
 ## Sit Back and Enjoy
 
-Take a sip of [Boozey](https://ian-flanagan.github.io/Boozey-Project/).
+Take a sip of [Boozey](https://cliffybar.github.io/Boozey-Project/).
